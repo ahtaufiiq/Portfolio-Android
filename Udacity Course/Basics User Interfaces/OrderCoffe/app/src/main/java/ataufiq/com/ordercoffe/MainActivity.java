@@ -12,7 +12,7 @@ import java.text.NumberFormat;
 public class MainActivity extends AppCompatActivity {
     TextView quantityTxt,priceTxt;
     Button orderBtn;
-    int quantity=1,price=1;
+    int quantity=1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +36,9 @@ public class MainActivity extends AppCompatActivity {
         priceTxt.setText(NumberFormat.getCurrencyInstance().format(number));
     }
 
+    private void displatMessage(String message){
+        priceTxt.setText(message);
+    }
 
     public void increment(View v){
         quantity++;
@@ -48,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void orderButton(View v){
-        price=quantity*5;
-        displayPrice(price);
+        String priceMessage="Total: $"+ quantity*5+"\nThank You";
+        displatMessage(priceMessage);
     }
 }
