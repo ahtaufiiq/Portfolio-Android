@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Court Counter</string>
+    <string name="labet_teamA">Team A</string>
+    <string name="score">0</string>
+</resources>
