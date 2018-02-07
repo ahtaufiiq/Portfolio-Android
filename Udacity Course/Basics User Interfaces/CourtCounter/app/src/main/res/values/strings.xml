@@ -3,4 +3,8 @@
     <string name="labet_team_a">Team A</string>
     <string name="labet_team_b">Team B</string>
     <string name="score">0</string>
+
+
+    <string name="fontTeamName">sans-serif-medium</string>
+    <string name="fontScore">sans-serif-light</string>
 </resources>
