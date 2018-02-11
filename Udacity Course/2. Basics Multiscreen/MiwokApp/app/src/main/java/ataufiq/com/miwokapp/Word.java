@@ -7,7 +7,9 @@ package ataufiq.com.miwokapp;
 public class Word {
 
     private String mMiwokTranslation,mDefaultTranslation;
-    private int mImageResourceId;
+    private int mImageResourceId=NO_IMAGE_PROVIDED;
+
+    private static final int NO_IMAGE_PROVIDED=-1;
 
     public Word(String miwokTranslationiwok, String defaultTranslation)
     {
@@ -31,5 +33,9 @@ public class Word {
 
     public int getmImageResourceId() {
         return mImageResourceId;
+    }
+
+    public boolean hasImage(){
+        return mImageResourceId != NO_IMAGE_PROVIDED;
     }
 }

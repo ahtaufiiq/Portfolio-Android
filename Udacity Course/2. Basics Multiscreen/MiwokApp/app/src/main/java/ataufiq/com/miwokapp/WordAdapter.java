@@ -1,6 +1,7 @@
 package ataufiq.com.miwokapp;
 
 import android.app.Activity;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,14 +17,15 @@ import java.util.ArrayList;
 
 public class WordAdapter extends ArrayAdapter{
 
-    private int mImageResourceId;
+    private int mColorResourceId;
 
-    public WordAdapter(Activity context, ArrayList<Word> words) {
+    public WordAdapter(Activity context, ArrayList<Word> words,int colorResourceId) {
         // Here, we initialize the ArrayAdapter's internal storage for the context and the list.
         // the second argument is used when the ArrayAdapter is populating a single TextView.
         // Because this is a custom adapter for two TextViews and an ImageView, the adapter is not
         // going to use this second argument, so it can be any value. Here, we used 0.
         super(context, 0, words );
+        mColorResourceId=colorResourceId;
     }
 
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -38,7 +40,13 @@ public class WordAdapter extends ArrayAdapter{
         Word currentWord = (Word) getItem(position);
 
         ImageView imageView = listItemView.findViewById(R.id.imageView);
-        imageView.setImageResource(currentWord.getmImageResourceId());
+
+        if (currentWord.hasImage()) {
+            imageView.setImageResource(currentWord.getmImageResourceId());
+            imageView.setVisibility(View.VISIBLE);
+        }else {
+            imageView.setVisibility(View.GONE);
+        }
         // Find the TextView in the list_item.xml layout with the ID version_name
         TextView nameTextView = (TextView) listItemView.findViewById(R.id.miwok_text_view);
         // Get the version name from the current AndroidFlavor object and
