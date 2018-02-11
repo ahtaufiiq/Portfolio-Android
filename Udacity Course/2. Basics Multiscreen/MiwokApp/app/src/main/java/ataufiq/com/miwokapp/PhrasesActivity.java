@@ -13,6 +13,13 @@ public class PhrasesActivity extends AppCompatActivity {
 
     private MediaPlayer mMediaPlayer;
 
+    private MediaPlayer.OnCompletionListener mCompletionListener = (new MediaPlayer.OnCompletionListener() {
+        @Override
+        public void onCompletion(MediaPlayer mediaPlayer) {
+            releaseMediaPlayer();
+        }
+    });
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,5 +63,14 @@ public class PhrasesActivity extends AppCompatActivity {
                 mMediaPlayer.start();
             }
         });
+    }
+
+    
+    private void releaseMediaPlayer(){
+        if (mMediaPlayer != null){
+            mMediaPlayer.release();
+
+            mMediaPlayer = null;
+        }
     }
 }
