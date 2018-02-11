@@ -7,18 +7,29 @@ package ataufiq.com.miwokapp;
 public class Word {
 
     private String mMiwokTranslation,mDefaultTranslation;
+    private int mImageResourceId;
 
-    public Word(String mMiwok, String mDefault)
+    public Word(String miwokTranslationiwok, String defaultTranslation)
     {
-        mMiwokTranslation = mMiwok;
-        mDefaultTranslation = mDefault;
+        mMiwokTranslation = miwokTranslationiwok;
+        mDefaultTranslation = defaultTranslation;
     }
 
+    public Word(String miwokTranslationiwok, String defaultTranslation,int imageResource)
+    {
+        mMiwokTranslation = miwokTranslationiwok;
+        mDefaultTranslation = defaultTranslation;
+        mImageResourceId =imageResource;
+    }
     public String getmMiwokTranslation(){
         return mMiwokTranslation;
     }
 
     public String getmDefaultTranslation(){
         return mDefaultTranslation;
+    }
+
+    public int getmImageResourceId() {
+        return mImageResourceId;
     }
 }

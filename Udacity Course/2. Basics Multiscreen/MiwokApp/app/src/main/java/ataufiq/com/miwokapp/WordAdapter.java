@@ -16,6 +16,8 @@ import java.util.ArrayList;
 
 public class WordAdapter extends ArrayAdapter{
 
+    private int mImageResourceId;
+
     public WordAdapter(Activity context, ArrayList<Word> words) {
         // Here, we initialize the ArrayAdapter's internal storage for the context and the list.
         // the second argument is used when the ArrayAdapter is populating a single TextView.
@@ -35,6 +37,8 @@ public class WordAdapter extends ArrayAdapter{
         // Get the {@link AndroidFlavor} object located at this position in the list
         Word currentWord = (Word) getItem(position);
 
+        ImageView imageView = listItemView.findViewById(R.id.imageView);
+        imageView.setImageResource(currentWord.getmImageResourceId());
         // Find the TextView in the list_item.xml layout with the ID version_name
         TextView nameTextView = (TextView) listItemView.findViewById(R.id.miwok_text_view);
         // Get the version name from the current AndroidFlavor object and
