@@ -1,12 +1,17 @@
 package ataufiq.com.miwokapp;
 
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 
 public class ColorsActivity extends AppCompatActivity {
+
+    private MediaPlayer mMediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,5 +43,14 @@ public class ColorsActivity extends AppCompatActivity {
         ListView listView = findViewById(R.id.list);
 
         listView.setAdapter(itemsAdapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                Word word =words.get(position);
+                mMediaPlayer = MediaPlayer.create(ColorsActivity.this, word.getmAudioResourceId());
+                mMediaPlayer.start();
+            }
+        });
     }
 }
