@@ -6,32 +6,31 @@ package ataufiq.com.miwokapp;
 
 public class Word {
 
-    private String mMiwokTranslation,mDefaultTranslation;
-    private int mImageResourceId=NO_IMAGE_PROVIDED;
+    private String mMiwokTranslation, mDefaultTranslation;
+    private int mImageResourceId = NO_IMAGE_PROVIDED;
 
-    private static final int NO_IMAGE_PROVIDED=-1;
+    private static final int NO_IMAGE_PROVIDED = -1;
 
     private int mAudioResourceId;
 
-    public Word(String miwokTranslationiwok, String defaultTranslation,int audioResourceId)
-    {
-        mMiwokTranslation   = miwokTranslationiwok;
+    public Word(String miwokTranslationiwok, String defaultTranslation, int audioResourceId) {
+        mMiwokTranslation = miwokTranslationiwok;
         mDefaultTranslation = defaultTranslation;
-        mAudioResourceId    = audioResourceId;
+        mAudioResourceId = audioResourceId;
     }
 
-    public Word(String miwokTranslationiwok, String defaultTranslation,int imageResource,int audioResourceId)
-    {
-        mMiwokTranslation   =   miwokTranslationiwok;
-        mDefaultTranslation =   defaultTranslation;
-        mImageResourceId    =   imageResource;
-        mAudioResourceId    =   audioResourceId;
+    public Word(String miwokTranslationiwok, String defaultTranslation, int imageResource, int audioResourceId) {
+        mMiwokTranslation = miwokTranslationiwok;
+        mDefaultTranslation = defaultTranslation;
+        mImageResourceId = imageResource;
+        mAudioResourceId = audioResourceId;
     }
-    public String getmMiwokTranslation(){
+
+    public String getmMiwokTranslation() {
         return mMiwokTranslation;
     }
 
-    public String getmDefaultTranslation(){
+    public String getmDefaultTranslation() {
         return mDefaultTranslation;
     }
 
@@ -39,7 +38,7 @@ public class Word {
         return mImageResourceId;
     }
 
-    public boolean hasImage(){
+    public boolean hasImage() {
         return mImageResourceId != NO_IMAGE_PROVIDED;
     }
 
