@@ -6,13 +6,15 @@ package taufiq.com.quakereport;
 
 public class Earthquake {
 
-    private String mMagnitude,mPlaceMagnitude,mDateMagnitude;
+    private String mMagnitude,mPlaceMagnitude;
+
+    private long mTimeInMilliseconds;
 
 
-    public Earthquake(String magnitude,String placeMagnitude,String dateMagnitude){
+    public Earthquake(String magnitude,String placeMagnitude,long timeInMilliseconds){
         mMagnitude  = magnitude;
         mPlaceMagnitude = placeMagnitude;
-        mDateMagnitude=dateMagnitude;
+        mTimeInMilliseconds=timeInMilliseconds;
     }
 
 
@@ -36,7 +38,7 @@ public class Earthquake {
      *
      * @return date Magnitude
      */
-    public String getmDateMagnitude() {
-        return mDateMagnitude;
+    public long getmTimeInMilliseconds() {
+        return mTimeInMilliseconds;
     }
 }
