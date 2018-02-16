@@ -7,15 +7,16 @@ package taufiq.com.quakereport;
 public class Earthquake {
 
     private double mMagnitude;
-    private String mPlaceMagnitude;
+    private String mPlaceMagnitude,mUrl;
 
     private long mTimeInMilliseconds;
 
 
-    public Earthquake(double magnitude,String placeMagnitude,long timeInMilliseconds){
+    public Earthquake(double magnitude, String placeMagnitude, long timeInMilliseconds, String url){
         mMagnitude  = magnitude;
         mPlaceMagnitude = placeMagnitude;
         mTimeInMilliseconds=timeInMilliseconds;
+        mUrl=url;
     }
 
 
@@ -41,5 +42,9 @@ public class Earthquake {
      */
     public long getmTimeInMilliseconds() {
         return mTimeInMilliseconds;
+    }
+
+    public String getmUrl() {
+        return mUrl;
     }
 }
