@@ -6,12 +6,13 @@ package taufiq.com.quakereport;
 
 public class Earthquake {
 
-    private String mMagnitude,mPlaceMagnitude;
+    private double mMagnitude;
+    private String mPlaceMagnitude;
 
     private long mTimeInMilliseconds;
 
 
-    public Earthquake(String magnitude,String placeMagnitude,long timeInMilliseconds){
+    public Earthquake(double magnitude,String placeMagnitude,long timeInMilliseconds){
         mMagnitude  = magnitude;
         mPlaceMagnitude = placeMagnitude;
         mTimeInMilliseconds=timeInMilliseconds;
@@ -22,7 +23,7 @@ public class Earthquake {
      *
      * @return Magnitude scala Richter
      */
-    public String getmMagnitude() {
+    public double getmMagnitude() {
         return mMagnitude;
     }
 

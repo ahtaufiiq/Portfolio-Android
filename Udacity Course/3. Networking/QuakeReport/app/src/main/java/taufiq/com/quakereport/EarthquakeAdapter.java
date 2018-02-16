@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -39,11 +40,12 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake>{
         Earthquake currentEarthquake = (Earthquake) getItem(position);
 
         // Find the TextView in the list_item.xml layout with the ID version_name
-        TextView nameTextView = (TextView) listItemView.findViewById(R.id.magnitude);
+        TextView magnitudeView = (TextView) listItemView.findViewById(R.id.magnitude);
         // Get the version name from the current AndroidFlavor object and
         // set this text on the name TextView
-        nameTextView.setText(currentEarthquake.getmMagnitude());
+        String formattedMagnitude = formatMagnitude(currentEarthquake.getmMagnitude());
 
+        magnitudeView.setText(formattedMagnitude);
         //-------------------------------------------------------------
 
         String originalLocation = currentEarthquake.getmPlaceMagnitude();
@@ -99,6 +101,11 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake>{
         // Return the whole list item layout (containing 2 TextViews and an ImageView)
         // so that it can be shown in the ListView
         return listItemView;
+    }
+
+    private String formatMagnitude(double magnitude) {
+        DecimalFormat magnitudeFormat = new DecimalFormat("0.0");
+        return magnitudeFormat.format(magnitude);
     }
 
     /**
