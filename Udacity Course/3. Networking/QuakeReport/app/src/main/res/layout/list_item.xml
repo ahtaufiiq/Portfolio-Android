@@ -15,7 +15,14 @@
         />
 
     <TextView
-        android:id="@+id/place"
+        android:id="@+id/location_offset"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="30km S of"/>
+
+    <TextView
+        android:id="@+id/primary_location"
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="wrap_content"
@@ -27,4 +34,11 @@
         android:layout_weight="1"
         android:layout_height="wrap_content"
         android:text="12 Februari 2017"/>
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="9.25 PM"/>
 </LinearLayout>
