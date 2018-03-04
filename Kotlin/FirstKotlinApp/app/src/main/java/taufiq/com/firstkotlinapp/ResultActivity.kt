@@ -15,10 +15,7 @@ class ResultActivity : AppCompatActivity() {
 
         textViewName =findViewById(R.id.tv_name)
 
-        val intentObject : Intent = intent
-
-        val name= intentObject.getStringExtra(MainActivity.KEY_NAME)
-
+        val name= intent.getStringExtra(MainActivity.KEY_NAME)
 
         textViewName.text="Hey $name"
 

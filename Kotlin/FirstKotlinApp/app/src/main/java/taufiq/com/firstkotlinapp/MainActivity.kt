@@ -44,12 +44,9 @@ class MainActivity : AppCompatActivity() {
                         textViewMessage.text = "Hello $name "
                     }
                     R.id.bt_result ->{
-                        val intent: Intent=Intent(applicationContext,ResultActivity::class.java)
                         val name = editTextName.text.toString()
-
-                        intent.putExtra(KEY_NAME,name)
-
-                        startActivity(intent)
+                        startActivity(Intent(applicationContext,ResultActivity::class.java)
+                                .putExtra(KEY_NAME,name))
                     }
                 }
             }
