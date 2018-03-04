@@ -15,9 +15,9 @@ class ResultActivity : AppCompatActivity() {
 
         textViewName =findViewById(R.id.tv_name)
 
-        val name= intent.getStringExtra(MainActivity.KEY_NAME)
+        val hero=intent.getSerializableExtra(MainActivity.KEY_NAME) as Hero
 
-        textViewName.text="Hey $name"
+        textViewName.text="Name Is: "+ hero.name +" And Real Name is: "+hero.realName
 
     }
 }

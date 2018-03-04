@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
                     R.id.bt_result ->{
                         val name = editTextName.text.toString()
                         startActivity(Intent(applicationContext,ResultActivity::class.java)
-                                .putExtra(KEY_NAME,name))
+                                .putExtra(KEY_NAME,Hero("Spiderman","Peter Parker")))
                     }
                 }
             }
