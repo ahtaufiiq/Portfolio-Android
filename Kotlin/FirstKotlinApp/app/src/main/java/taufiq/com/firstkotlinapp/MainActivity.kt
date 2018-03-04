@@ -7,7 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 
-class MainActivity : AppCompatActivity() , View.OnClickListener{
+class MainActivity : AppCompatActivity() {
 
 
     lateinit var editTextName : EditText
@@ -24,20 +24,25 @@ class MainActivity : AppCompatActivity() , View.OnClickListener{
         textViewMessage=findViewById(R.id.message)
         buttonIntroduce=findViewById(R.id.bt_introduce)
 
-        buttonClickMe.setOnClickListener(this)
-        buttonIntroduce.setOnClickListener(this)
+        val myClickListener= object : View.OnClickListener{
+            override fun onClick(view: View?) {
+
+                when(view?.id){
+                    R.id.bt_introduce ->{
+                        var name =editTextName.text
+                        textViewMessage.text = "Hello $name , I am Your Friend"
+                    }
+                    R.id.bt_click ->{
+                        var name =editTextName.text
+                        textViewMessage.text = "Hello $name "
+                    }
+                }
+            }
+
+        }
+
+        buttonClickMe.setOnClickListener(myClickListener)
+        buttonIntroduce.setOnClickListener(myClickListener)
     }
 
-    override fun onClick(view: View?) {
-        when(view?.id){
-            R.id.bt_introduce ->{
-                var name =editTextName.text
-                textViewMessage.text = "Hello $name , I am Your Friend"
-            }
-            R.id.bt_click ->{
-                var name =editTextName.text
-                textViewMessage.text = "Hello $name "
-            }
-        }
-    }
 }
