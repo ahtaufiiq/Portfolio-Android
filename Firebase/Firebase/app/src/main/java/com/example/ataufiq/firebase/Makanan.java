@@ -10,6 +10,10 @@ public class Makanan {
     private String foodName;
     private String typeFood;
 
+    public Makanan(){
+
+    }
+
     public Makanan(String id_food, String foodName, String typeFood) {
         this.id_food = id_food;
         this.foodName = foodName;
