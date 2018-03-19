@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Firebase</string>
+    <array name="makanan">
+        <item name="rock">Nasi</item>
+        <item name="pop">Minuman</item>
+        <item name="jazz">Mie</item>
+    </array>
+</resources>
