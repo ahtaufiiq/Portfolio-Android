@@ -6,7 +6,7 @@ package com.example.ataufiq.firebase;
 
 public class Makanan {
 
-    private String id_food;
+    private String idFood;
     private String foodName;
     private String typeFood;
 
@@ -14,14 +14,14 @@ public class Makanan {
 
     }
 
-    public Makanan(String id_food, String foodName, String typeFood) {
-        this.id_food = id_food;
+    public Makanan(String idFood, String foodName, String typeFood) {
+        this.idFood = idFood;
         this.foodName = foodName;
         this.typeFood = typeFood;
     }
 
-    public String getId_food() {
-        return id_food;
+    public String getIdFood() {
+        return idFood;
     }
 
     public String getFoodName() {
