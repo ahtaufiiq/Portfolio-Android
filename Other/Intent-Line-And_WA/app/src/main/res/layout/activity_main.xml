@@ -29,6 +29,7 @@
         android:onClick="sendText"/>
     <EditText
         android:id="@+id/et_nomor_handphone"
+        android:text="6281226609921"
         android:hint="Masukkan Nomor Handphone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void getKontak(){
-        AndroidNetworking.get("http://10.0.3.2/rest_ci/index.php/kontak")
+        AndroidNetworking.get("http://10.0.3.2/api_namasa/index.php/product")
                 .setTag("test")
                 .setPriority(Priority.LOW)
                 .build()
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                         for(int i=0; i<response.length();i++) {
                             try {
                                 JSONObject obj = response.getJSONObject(i);
-                                listItems.add(new Kontak(obj.getString("id"), obj.getString("nama"), obj.getString("nomor")));
+                                listItems.add(new Kontak(obj.getString("description"), obj.getString("name"), obj.getString("name")));
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
