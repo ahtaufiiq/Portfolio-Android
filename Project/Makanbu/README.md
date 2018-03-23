@@ -4,8 +4,10 @@
 * This project is Capstone Project in my Majors for build application 
 using the Scrum method
 
-[App Architecture](https://www.mindmeister.com/1060470338/client-app)
+[App Architecture](https://www.mindmeister.com/1060470338/client-app) Designed By [Ahmad Taufiq](https://about.me/ahmadtaufiq)
 
+This MockUp Designed By [Aprianil Sesti Rangga](https://about.me/aprianil)
+![Image](https://github.com/ataufiq123/Walkthrough-Android/blob/master/Project/Makanbu/1.png)![Image](https://github.com/ataufiq123/Walkthrough-Android/blob/master/Project/Makanbu/2.png)
 ## Feature
 
 * [x] Front End App
@@ -23,7 +25,7 @@ using the Scrum method
 Cloning Project
 
 ```
-git clone https://github.com/ataufiq123/FaithFinder.git
+git clone https://github.com/ataufiq123/Walkthrough-Android/edit/master/Project/Makanbu.git
 ```
 
 ## Built With
