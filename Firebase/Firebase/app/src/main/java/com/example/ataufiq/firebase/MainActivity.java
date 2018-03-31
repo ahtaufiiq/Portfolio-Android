@@ -10,6 +10,7 @@ import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.ataufiq.firebase.model.Makanan;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -22,7 +23,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     public static final String MAKANAN_NAME = "makananName";
-    public static final String ARTIST_ID = "makananId";
+    public static final String MAKANAN_ID = "makananId";
     public static final String table1 = "Makanan";
     public static final String table2 = "Review";
 
@@ -47,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
         //getting views
         et_food_name = (EditText) findViewById(R.id.editTextName);
-        spinner_type_food = (Spinner) findViewById(R.id.spinnerGenres);
+        spinner_type_food = (Spinner) findViewById(R.id.spinner_tipe_makanan);
         listViewFood = (ListView) findViewById(R.id.listViewArtists);
 
         btn_add_food = (Button) findViewById(R.id.buttonAddArtist);

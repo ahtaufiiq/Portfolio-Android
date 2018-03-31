@@ -1,4 +1,4 @@
-package com.example.ataufiq.firebase;
+package com.example.ataufiq.firebase.model;
 
 /**
  * Created by ataufiq on 20/03/18.

@@ -1,14 +1,13 @@
 package taufiq.com.trynetworking;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.common.Priority;
@@ -21,17 +20,17 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.LinkedList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText mNama,mNomor;
+    EditText mNama, mNomor;
     Button buttonPost;
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
 
     private LinkedList<Kontak> listItems;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,10 +40,10 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
 
-        mNama= findViewById(R.id.et_nama);
+        mNama = findViewById(R.id.et_nama);
         mNomor = findViewById(R.id.et_nomor);
 
-        buttonPost=findViewById(R.id.bt_post);
+        buttonPost = findViewById(R.id.bt_post);
 
         //Create variabel LinkedList for save data
         listItems = new LinkedList<>();
@@ -59,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         buttonPost.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                postKontak(mNama.getText().toString(),mNomor.getText().toString());
+                postKontak(mNama.getText().toString(), mNomor.getText().toString());
                 getKontak();
 
             }
@@ -67,7 +66,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-    public void getKontak(){
+
+    public void getKontak() {
         AndroidNetworking.get("http://10.0.3.2/api_namasa/index.php/product")
                 .setTag("test")
                 .setPriority(Priority.LOW)
@@ -76,15 +76,17 @@ public class MainActivity extends AppCompatActivity {
 
                     @Override
                     public void onResponse(JSONArray response) {
-                        for(int i=0; i<response.length();i++) {
-                            try {
+
+                        try {
+                            for (int i = 0; i < response.length(); i++) {
                                 JSONObject obj = response.getJSONObject(i);
                                 listItems.add(new Kontak(obj.getString("description"), obj.getString("name"), obj.getString("name")));
-                            } catch (JSONException e) {
-                                e.printStackTrace();
                             }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
                         }
                     }
+
                     @Override
                     public void onError(ANError error) {
                         Log.d("nama", String.valueOf(error));
@@ -92,7 +94,8 @@ public class MainActivity extends AppCompatActivity {
                 });
 
     }
-    public void postKontak(String nama, String nomor){
+
+    public void postKontak(String nama, String nomor) {
         AndroidNetworking.post("http://10.0.3.2/rest_ci/index.php/kontak")
                 .addBodyParameter("nama", nama)
                 .addBodyParameter("nomor", nomor)
@@ -104,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onResponse(JSONObject response) {
                         // do anything with response
                     }
+
                     @Override
                     public void onError(ANError error) {
                         // handle error
@@ -111,7 +115,8 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
     }
-    public void deleteKontak(String id){
+
+    public void deleteKontak(String id) {
         AndroidNetworking.delete("http://10.0.3.2/rest_ci/index.php/kontak")
                 .addBodyParameter("id", "11")
                 .setTag("test")
@@ -122,6 +127,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onResponse(JSONObject response) {
                         // do anything with response
                     }
+
                     @Override
                     public void onError(ANError error) {
                         // handle error
@@ -129,7 +135,8 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
     }
-    public void updateKontak(String id,String nama,String nomor){
+
+    public void updateKontak(String id, String nama, String nomor) {
         AndroidNetworking.put("http://10.0.3.2/rest_ci/index.php/kontak")
                 .addBodyParameter("id", "3")
                 .addBodyParameter("nama", "Andi")
@@ -142,6 +149,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onResponse(JSONObject response) {
                         // do anything with response
                     }
+
                     @Override
                     public void onError(ANError error) {
                         // handle error

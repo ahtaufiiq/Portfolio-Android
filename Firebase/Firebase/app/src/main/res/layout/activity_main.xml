@@ -15,7 +15,7 @@
         android:hint="Enter name" />
 
     <Spinner
-        android:id="@+id/spinnerGenres"
+        android:id="@+id/spinner_tipe_makanan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/editTextName"
@@ -25,11 +25,11 @@
         android:id="@+id/buttonAddArtist"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/spinnerGenres"
+        android:layout_below="@id/spinner_tipe_makanan"
         android:text="Add" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/label_daftar_makanan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/buttonAddArtist"
@@ -37,18 +37,10 @@
         android:textAlignment="center"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textView"
-        android:text="Tap on an Makanan to add and view Review"
-        android:textAlignment="center" />
-
     <ListView
         android:id="@+id/listViewArtists"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"></ListView>
+        android:layout_below="@+id/label_daftar_makanan"></ListView>
 
 </RelativeLayout>
