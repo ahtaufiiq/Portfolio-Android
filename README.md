@@ -5,7 +5,7 @@ My Journey and List App in Android
 
 Name | Github URL | Demo | Built With
 --- | --- | --- | ---
-Popotoan | https://github.com/ataufiq123/Popotoan | ![demogif](https://github.com/ataufiq123/Popotoan/blob/master/PORTOFOLIO.png) ![demogif] | Firebase (Authentication,Realtime Database, Storage, Push Notification)
+Popotoan | https://github.com/ataufiq123/Popotoan | ![demogif](https://github.com/ataufiq123/Popotoan/blob/master/PORTOFOLIO.png) | Firebase (Authentication,Realtime Database, Storage, Push Notification)
 Faith Finder | https://github.com/ataufiq123/FaithFinder | ![demogif](https://github.com/ataufiq123/FaithFinder/blob/master/app.gif)|- [API Google Maps](https://developers.google.com/places/web-service/supported_types?hl=id) - Fragment - SQLite
 MakanBu | https://github.com/ataufiq123/Walkthrough-Android/tree/master/Project/Makanbu |![Demo](https://github.com/ataufiq123/Walkthrough-Android/blob/master/Project/Makanbu/2.png) |- Authentication and Realtime Database from Firebase
 Intro Firebase | https://github.com/ataufiq123/Walkthrough-Android/tree/master/Firebase/Firebase |![Demo](https://github.com/ataufiq123/Walkthrough-Android/blob/master/Firebase/Firebase/Firebase.gif)|- RealTime Database 
