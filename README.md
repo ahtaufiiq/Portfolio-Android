@@ -5,7 +5,7 @@ My Journey and List App in Android
 
 Name | Github URL | Demo | Built With
 --- | --- | --- | ---
-Teacher Mari Les | - | ![demogif](hhttps://github.com/ataufiq123/Walkthrough-Android/blob/master/Teacher.gif) | Firebase (Firestore, Authentication)
+Teacher Mari Les | - | ![demogif](https://github.com/ataufiq123/Walkthrough-Android/blob/master/Teacher.gif) | Firebase (Firestore, Authentication)
 Mari Les | - | ![demogif](https://github.com/ataufiq123/Walkthrough-Android/blob/master/MariLes.gif) | Firebase (Firestore, Authentication)
 ReadNews | https://github.com/ataufiq123/ReadNews | ![demogif](https://github.com/ataufiq123/ReadNews/blob/master/mainDemo.gif) ![demogif](https://github.com/ataufiq123/ReadNews/blob/master/searchDemo.gif) | Newsapi.org, Fast Android Networking, Animation
 Popotoan | https://github.com/ataufiq123/Popotoan | ![demogif](https://github.com/ataufiq123/Popotoan/blob/master/PORTOFOLIO.png) | Firebase (Authentication,Realtime Database, Storage, Push Notification)
